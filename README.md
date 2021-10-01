@@ -161,6 +161,17 @@ class MyGallery extends React.Component {
       return <a href='' className='image-gallery-custom-action' onClick={this._customAction.bind(this)}/>
     }
   ```
+* `thumbnailsCustomControlPrev/renderThumbnailsCustomControlNext`: Function, rendering custom image thumbnail controls.
+  * Use this function to render custom controls or other elements on the currently displayed image (such as import picture buttons).
+  * Divided by previous or next
+  ```javascript
+    renderThumbnailsCustomControlPrev() {
+      return <a href='' className='image-gallery-thumbnails-custom-control-prev' onClick={this._customThumbnailsAction.bind(this)}/>
+    }
+    renderThumbnailsCustomControlNext() {
+      return <a href='' className='image-gallery-thumbnails-custom-control-next' onClick={this._customThumbnailsAction.bind(this)}/>
+    }
+  ```
 * `renderItem`: Function, custom item rendering
   * NOTE: Highly suggest looking into a render cache such as React.memo if you plan to override renderItem
   * On a specific item `[{thumbnail: '...', renderItem: this.myRenderItem}]`
