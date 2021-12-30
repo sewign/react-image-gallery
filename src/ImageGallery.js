@@ -1451,12 +1451,12 @@ class ImageGallery extends React.Component {
                 {renderThumbnailsCustomControlPrev && (
                     <div
                         ref={this.thumbnailsCustomControlPrev} className="image-gallery-thumbnails-custom-control prev">
-                      {renderThumbnailsCustomControlPrev()}
+                      {renderThumbnailsCustomControlPrev(this.slideLeft, this.canSlideLeft())}
                     </div>
                 )}
                 {renderThumbnailsCustomControlNext && (
                     <div ref={this.thumbnailsCustomControlNext} className="image-gallery-thumbnails-custom-control next">
-                      {renderThumbnailsCustomControlNext()}
+                      {renderThumbnailsCustomControlNext(this.slideRight, this.canSlideRight())}
                     </div>
                 )}
                 <div className="image-gallery-thumbnails" ref={this.thumbnailsWrapper} style={this.getThumbnailBarHeight()}>

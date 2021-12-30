@@ -167,10 +167,10 @@ class MyGallery extends React.Component {
   * Use this function to render custom controls or other elements on the currently displayed image (such as import picture buttons).
   * Divided by previous or next
   ```javascript
-    renderThumbnailsCustomControlPrev() {
+    renderThumbnailsCustomControlPrev(slideLeft, canSlideLeft) {
       return <a href='' className='image-gallery-thumbnails-custom-control-prev' onClick={this._customThumbnailsAction.bind(this)}/>
     }
-    renderThumbnailsCustomControlNext() {
+    renderThumbnailsCustomControlNext(slideRight, canSlideRight) {
       return <a href='' className='image-gallery-thumbnails-custom-control-next' onClick={this._customThumbnailsAction.bind(this)}/>
     }
   ```
