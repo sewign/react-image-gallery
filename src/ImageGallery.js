@@ -1283,6 +1283,7 @@ class ImageGallery extends React.Component {
         originalWidth={item.originalWidth}
         originalTitle={item.originalTitle}
         sizes={item.sizes}
+        loading={item.loading}
         srcSet={item.srcSet}
       />
     );
@@ -1301,6 +1302,7 @@ class ImageGallery extends React.Component {
           width={item.thumbnailWidth}
           alt={item.thumbnailAlt}
           title={item.thumbnailTitle}
+          loading={item.thumbnailLoading}
           onError={handleThumbnailError}
         />
         {
@@ -1487,8 +1489,10 @@ ImageGallery.propTypes = {
     original: string,
     originalHeight: number,
     originalWidth: number,
+    loading: string,
     thumbnailHeight: number,
     thumbnailWidth: number,
+    thumbnailLoading: string,
     fullscreen: string,
     originalAlt: string,
     originalTitle: string,
